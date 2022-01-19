@@ -1,0 +1,2 @@
+module JclinicsHelper
+end

@@ -1,0 +1,27 @@
+<%= form_with(model: jclinic, local: true) do |form| %>
+  <% if jclinic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(jclinic.errors.count, "error") %> prohibited this jclinic from being saved:</h2>
+
+      <ul>
+        <% jclinic.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+  
+    <%= form.text_field :name, class:"form-control",placeholder:"Name" %>
+  </div>
+  <br/>
+  <div class="field form-group">
+
+    <%= form.text_field :phone, class:"form-control",placeholder:"Phone" %>
+  </div>
+<br/>
+  <div class="actions">
+    <%= form.submit class:'btn btn-secondary'%>
+  </div>
+<% end %>
